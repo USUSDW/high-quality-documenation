@@ -7,22 +7,8 @@ OUTPUT_FILE='OUTPUT.pdf'
 #
 # pandoc --from markdown --pdf-engine=xelatex -o OUTPUT.pdf SOURCE.md
 
-# -------------------------- This below is pointless for this section
-# By adding the `-s` option, it makes it so the output is standalone HTML, including head and body tags
+
+# Add a custom LaTeX header to the TeX processed PDthe TeX processed PDF. Allows you to import select packages and set select options that will only be seen by the LaTeX processor before generating the PDF.
+#   This is achieved by adding the `-H [HEADER FILE]` option
 #
-# pandoc --from markdown --to html -s -o OUTPUT.html SOURCE.md
-
-# Making it so you can use "GitHub Flavored Markdown" Markdown features, instead of *just* vanilla Markdown 
-# Note: Pandoc's Markdown processor seems to enable *most* features of GitHub Flavored Markdown by default.
-#
-# pandoc --from gfm --to html -s -o OUTPUT.html SOURCE.md
-
-# Making a LaTeX supported html document by enabling MathJax. Note, the `-s` flag *must* be provided.
-# Note: You can create a MathJax.js file to configure MathJax, and specify the path to it 
-#   with --mathjax=path/to/MathJax.js
-# You can also select other online LaTeX parsers if desired. MathJax is quite feature rich, and I 
-#   find it works quite well
-# 
-# pandoc --from markdown --to html --mathjax -s -o OUTPUT.html SOURCE.md
-
- 
+# pandoc --from markdown --pdf-engine=xelatex -H src/header.tex -o OUTPUT.pdf SOURCE.md
