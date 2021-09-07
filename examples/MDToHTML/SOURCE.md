@@ -1,6 +1,6 @@
 # Starting With The Basics
 
-This section of text belongs to the title above. I can write a whole bunch of text here. This is equivalent to a paragraph environment! 
+This section of text belongs to the title above. I can write a whole bunch of text here. This is equivalent to a paragraph environment! I'm going to show off *italic* text, as well as **bolded text**. I also want to show off ***multi-track drifting.*** 
 
 ## First Subheader
 
